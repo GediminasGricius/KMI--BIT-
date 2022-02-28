@@ -1,0 +1,33 @@
+<div class="row mt-5">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                KMI skaičiuoklė
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="" class="form-label">Įveskite savo svorį (kg.)</label>
+                    <input type="number" class="form-control" [(ngModel)]="svoris">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Įveskite savo ūgį (cm.)</label>
+                    <input type="number" class="form-control" [(ngModel)]="ugis">
+                </div>
+                <button class="btn btn-success" (click)="skaiciuokKMI()">Skaičiuoti KMI</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Informacija</div>
+            <div class="card-body">
+              Jūsų KMI:  {{ kmi.toFixed(2) }}
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<input type="number" name="skaicius1" placeholder="Iveskite skaiciu" [(ngModel)]="skaicius"> <br>
+
+<div class="alert alert-info">Skaicius kvadratu: {{ skaicius*skaicius }}</div>
+-->
